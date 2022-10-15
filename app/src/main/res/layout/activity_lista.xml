@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Theme.HauseStock"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_fondo"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@color/white" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="155dp"
+        android:layout_height="54dp"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="LISTA"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/linear_lista_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical"
+        android:paddingTop="15dp">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lista_deArticulos"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="320dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:hint="Articulos"
+            android:textColor="@color/purple_fondo"
+            android:textColorHint="@color/purple_fondo"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/marino"
+            app:boxStrokeWidth="3dp"
+            app:counterTextColor="@color/purple_fondo"
+            app:hintTextColor="@color/purple_fondo"
+            app:suffixTextColor="@color/purple_fondo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_imput_lista"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:textColor="@color/purple_fondo"
+                android:textColorHint="@color/purple_fondo"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/marino"
+            android:fontFamily="casual"
+            android:text="ADD"
+            android:textColor="@color/purple_fondo"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:onClick="agregarLista"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/lista_compras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"></LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

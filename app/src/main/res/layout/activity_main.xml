@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foregroundGravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-60dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="377dp"
+                android:layout_height="496dp"
+                android:layout_gravity="top"
+                android:gravity="top"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="110dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="214dp"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/lista_compras"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:onClick="ejec_lista"
+                        app:srcCompat="@drawable/notas" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:id="@+id/button_agregar"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:onClick="ejec_agregar"
+                        app:srcCompat="@drawable/agregar_stock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="173dp"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/imageButton3"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        app:srcCompat="@drawable/heladera" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton5"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        app:srcCompat="@drawable/vencimientos" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_fondo"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/Theme.HauseStock" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="155dp"
+        android:layout_height="54dp"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="HOME"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

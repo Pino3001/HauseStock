@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.HauseStock" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_fondo</item>
+        <item name="colorPrimaryDark">@color/purple_fondo</item>
+        <item name="colorAccent">@color/teal_200</item>
+        <item name="android:statusBarColor">@color/purple_fondo</item>
+        <item name="backgroundColor">@color/purple_fondo</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="Theme.HauseStock.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.HauseStock.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.HauseStock.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.HauseStock.Texto" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+</resources>
+
