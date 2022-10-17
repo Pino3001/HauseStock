@@ -13,6 +13,10 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    <style name="Theme.HauseStock.Lista">
+        <item name="android:textColor">@color/purple_fondo</item>
+        <item name="color">@color/purple_fondo</item>
+    </style>
 
     <style name="Theme.HauseStock.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="Theme.HauseStock.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

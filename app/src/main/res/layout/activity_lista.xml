@@ -30,7 +30,7 @@
     <LinearLayout
         android:id="@+id/linear_lista_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginTop="70dp"
         android:orientation="vertical"
         android:paddingTop="15dp">
@@ -69,22 +69,28 @@
             android:layout_gravity="center"
             android:backgroundTint="@color/marino"
             android:fontFamily="casual"
+            android:onClick="agregar"
             android:text="ADD"
             android:textColor="@color/purple_fondo"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:onClick="agregarLista"/>
+            android:textStyle="bold" />
 
-        <ScrollView
+
+        <ListView
+            android:id="@+id/list1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:id="@+id/lista_compras"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"></LinearLayout>
-        </ScrollView>
+            android:layout_height="match_parent"
+            android:background="@color/gris"
+            android:cacheColorHint="@color/purple_fondo"
+            android:divider="@color/marino"
+            android:dividerHeight="2dp"
+            android:foregroundTint="#FF9800"
+            android:listSelector="@color/marino"
+            android:stackFromBottom="false"
+            android:theme="@style/Theme.HauseStock.Lista"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
     </LinearLayout>
 
 
