@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.HauseStock.Lista">
+        <item name="textInputOutlinedDenseStyle">
+            @style/Widget.MaterialComponents.TextInputLayout.OutlinedBox
+        </item>
+        <item name="android:outlineAmbientShadowColor">@color/marino</item>
+
+        <item name="borderRound">3dp</item>
+        <item name="color">@color/marino</item>
+    </style>
+</resources>
