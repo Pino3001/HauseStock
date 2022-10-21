@@ -13,14 +13,20 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-    <style name="Theme.HauseStock.Lista">
-        <item name="android:textColor">@color/purple_fondo</item>
-        <item name="color">@color/purple_fondo</item>
+    <style name="Theme.listview" parent="Theme.HauseStock">
+        <item name="checkedButton">@id/checkbox</item>
+        <item name="checkboxStyle">@style/Widget.Material3.CheckedTextView</item>
+        <item name="checkedTextViewStyle">@style/Widget.AppCompat.ListView</item>
+        <item name="checkedIcon">@id/checkbox</item>
+        <item name="checkedIconVisible">true</item>
+        <item name="android:checkedButton">@id/checkbox</item>
     </style>
 
     <style name="Theme.HauseStock.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="Theme.HauseStock.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-    <style name="Theme.HauseStock.Texto" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+    <style name="Theme.HauseStock.Texto">
+        <item name="fontFamily">casual</item>
+    </style>
 
 </resources>
 

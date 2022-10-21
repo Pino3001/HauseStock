@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="marino">#FF03FAC5</color>
     <color name="gris">#4B4A4A</color>
+    <color name="backgraund">#2C2C30</color>
 </resources>

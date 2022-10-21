@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatCheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:foregroundGravity="right"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:fontFamily="sans-serif-medium"
+    android:textColor="@color/purple_fondo"
+    android:textSize="25sp"
+    style="@style/Theme.listview">
+</androidx.appcompat.widget.AppCompatCheckedTextView>

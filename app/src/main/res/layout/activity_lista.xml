@@ -4,7 +4,7 @@
     style="@style/Theme.HauseStock"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/backgraund"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
@@ -38,16 +38,15 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/lista_deArticulos"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="320dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:hint="Articulos"
             android:textColor="@color/purple_fondo"
             android:textColorHint="@color/purple_fondo"
-            app:boxBackgroundMode="outline"
+            app:boxBackgroundMode="filled"
             app:boxStrokeColor="@color/marino"
-            app:boxStrokeWidth="3dp"
+            app:boxBackgroundColor="@color/marino"
             app:counterTextColor="@color/purple_fondo"
             app:hintTextColor="@color/purple_fondo"
             app:suffixTextColor="@color/purple_fondo">
@@ -56,6 +55,8 @@
                 android:id="@+id/text_imput_lista"
                 android:layout_width="300dp"
                 android:layout_height="70dp"
+                android:drawableTint="@color/purple_fondo"
+                android:shadowColor="@color/purple_fondo"
                 android:textColor="@color/purple_fondo"
                 android:textColorHint="@color/purple_fondo"
                 android:textSize="18sp"
@@ -76,18 +77,19 @@
             android:textStyle="bold" />
 
 
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/marino" />
+
         <ListView
             android:id="@+id/list1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/gris"
-            android:cacheColorHint="@color/purple_fondo"
+            android:choiceMode="multipleChoice"
             android:divider="@color/marino"
             android:dividerHeight="2dp"
-            android:foregroundTint="#FF9800"
-            android:listSelector="@color/marino"
-            android:stackFromBottom="false"
-            android:theme="@style/Theme.HauseStock.Lista"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
