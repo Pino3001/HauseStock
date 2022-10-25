@@ -124,6 +124,7 @@ public class Lista extends Activity {
         listaCompras.add(editorTexto.getText().toString());
         Toast.makeText(getApplicationContext(),"Comprar: " + editorTexto.getText().toString(),Toast.LENGTH_SHORT).show();
         editorTexto.setText("");
+        adaptador1.notifyDataSetChanged();
     }
 
   /* public void imprimoLista(View view){

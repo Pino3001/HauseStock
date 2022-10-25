@@ -69,7 +69,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:backgroundTint="@color/marino"
-            android:fontFamily="casual"
+            android:fontFamily="serif"
             android:onClick="agregar"
             android:text="ADD"
             android:textColor="@color/purple_fondo"
