@@ -28,6 +28,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
 
+import com.app_control_stock.hausestock.Lista.Lista;
+import com.app_control_stock.hausestock.Lista.ListaAdapter;
 import com.google.gson.Gson;
 
 import android.content.Context;
@@ -327,14 +329,14 @@ public class TinyDB {
     }
 
 
-    public ArrayList<Object> getListObject(String key, Class<?> mClass){
+    public ArrayList<ListaAdapter> getListObject(String key){
     	Gson gson = new Gson();
 
     	ArrayList<String> objStrings = getListString(key);
-    	ArrayList<Object> objects =  new ArrayList<Object>();
+    	ArrayList<ListaAdapter> objects =  new ArrayList<ListaAdapter>();
 
     	for(String jObjString : objStrings){
-    		Object value  = gson.fromJson(jObjString,  mClass);
+    		ListaAdapter value  = gson.fromJson(jObjString,  ListaAdapter.class);
     		objects.add(value);
     	}
     	return objects;
@@ -489,7 +491,7 @@ public class TinyDB {
     	putString(key, gson.toJson(obj));
     }
 
-    public void putListObject(String key, ArrayList<Object> objArray){
+    public void putListObject(String key, ArrayList<ListaAdapter> objArray){
     	checkForNullKey(key);
    	Gson gson = new Gson();
    	ArrayList<String> objStrings = new ArrayList<String>();

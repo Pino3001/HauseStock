@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Theme.HauseStock"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/Theme.HauseStock"
-    android:background="@color/white"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@color/backgraund">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
@@ -34,13 +34,14 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/agrego_articulo"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxBackgroundColor="@color/marino"
             android:layout_width="320dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:backgroundTint="@color/marino"
             android:backgroundTintMode="screen"
             android:textColorHint="@color/purple_fondo"
-            app:boxBackgroundMode="outline"
+            app:boxBackgroundMode="filled"
             app:boxStrokeColor="@color/marino"
             app:boxStrokeWidth="3dp"
             app:counterTextColor="@color/purple_fondo"
@@ -58,12 +59,12 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="91dp"
             android:layout_gravity="center"
             android:orientation="horizontal"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp">
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/editTextDate"
@@ -80,7 +81,8 @@
                 android:textColorHint="@color/purple_fondo"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:boxBackgroundMode="outline"
+                app:boxBackgroundMode="filled"
+                app:boxBackgroundColor="@color/marino"
                 app:boxStrokeColor="@color/marino"
                 app:boxStrokeWidth="3dp"
                 app:counterTextColor="@color/purple_fondo"
@@ -94,7 +96,7 @@
                     android:textColor="@color/purple_fondo"
                     android:textColorHint="@color/purple_fondo"
                     android:textSize="18sp"
-                    android:textStyle="bold"  />
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -118,7 +120,8 @@
                 android:textColorHint="@color/purple_fondo"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:boxBackgroundMode="outline"
+                app:boxBackgroundMode="filled"
+                app:boxBackgroundColor="@color/marino"
                 app:boxStrokeColor="@color/marino"
                 app:boxStrokeWidth="3dp"
                 app:counterTextColor="@color/purple_fondo"
@@ -128,7 +131,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:hint="Cantidad"
+                    android:hint="Cant."
                     android:textColor="@color/purple_fondo"
                     android:textColorHint="@color/purple_fondo"
                     android:textSize="18sp"
@@ -145,7 +148,8 @@
             android:backgroundTint="@color/marino"
             android:backgroundTintMode="screen"
             android:textColorHint="@color/purple_fondo"
-            app:boxBackgroundMode="outline"
+            app:boxBackgroundMode="filled"
+            app:boxBackgroundColor="@color/marino"
             app:boxStrokeColor="@color/marino"
             app:boxStrokeWidth="3dp"
             app:counterTextColor="@color/purple_fondo"
