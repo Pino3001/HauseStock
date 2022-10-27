@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/fondo_app"
-    tools:context=".VerStocks.VerStock">
+    android:orientation="vertical"
+    tools:context=".Vencimientos.VerVencimientos">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar4"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purple_fondo"
@@ -21,7 +21,7 @@
         android:layout_height="54dp"
         android:fontFamily="casual"
         android:gravity="center"
-        android:text="Ver Stock"
+        android:text="VENCIMIENTOS"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold" />
@@ -29,64 +29,45 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:layout_marginTop="70dp"
-        android:orientation="horizontal"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp">
+        android:layout_marginTop="70dp">
 
         <TextView
-            android:id="@+id/textView4"
-            android:layout_width="41dp"
-            android:layout_height="match_parent"
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_weight="1"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center"
             android:text="Articulos"
             android:textColor="@color/purple_fondo"
-            android:textSize="22sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView5"
-            android:layout_width="80dp"
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_weight="1"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center"
-            android:text="Cantidad"
+            android:text="Vencimientos"
             android:textColor="@color/purple_fondo"
-            android:textSize="22sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="38dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:text="Ubicacion"
-            android:textColor="@color/purple_fondo"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-
     </LinearLayout>
 
     <View
-        android:id="@+id/divider4"
+        android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:layout_marginTop="100dp"
-        android:background="@color/marino"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        app:layout_anchor="@+id/recycler_view"
-        app:layout_anchorGravity="top|center" />
+        android:layout_marginTop="110dp"
+        android:background="@color/marino" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
+        android:id="@+id/recycler_vencimientos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="110dp" />
-
+        android:layout_marginTop="115dp" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

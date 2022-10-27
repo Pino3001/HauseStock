@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@color/backgraund"
+    android:background="@drawable/fondo_app"
     app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity">
 
@@ -46,9 +46,8 @@
                         app:srcCompat="@drawable/notas" />
 
                     <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content" />
 
                     <ImageButton
                         android:id="@+id/button_agregar"
@@ -71,14 +70,14 @@
                         app:srcCompat="@drawable/heladera" />
 
                     <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content" />
 
                     <ImageButton
                         android:id="@+id/imageButton5"
                         android:layout_width="170dp"
                         android:layout_height="170dp"
+                        android:onClick="ejec_VerVencimientos"
                         app:srcCompat="@drawable/vencimientos" />
                 </LinearLayout>
             </LinearLayout>

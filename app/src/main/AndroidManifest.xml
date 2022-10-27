@@ -30,7 +30,8 @@
         </activity>
         <activity android:name=".Lista.Lista"/>
         <activity android:name=".AgregarStock.Agregar"/>
-        <activity android:name=".VerStocks.Ver_Stock" />
+        <activity android:name=".VerStocks.VerStock" />
+        <activity android:name=".Vencimientos.VerVencimientos"/>
     </application>
 
 </manifest>

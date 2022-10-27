@@ -4,7 +4,7 @@
     style="@style/Theme.HauseStock"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgraund">
+    android:background="@drawable/fondo_app">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
@@ -68,7 +68,6 @@
             android:backgroundTint="@color/marino"
             android:backgroundTintMode="screen"
             android:ems="10"
-            android:inputType="number"
             android:textColor="@color/purple_fondo"
             android:textColorHint="@color/purple_fondo"
             android:textSize="18sp"
@@ -86,6 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:hint="Fecha de Vencimiento"
+                android:inputType="date"
                 android:textColor="@color/purple_fondo"
                 android:textColorHint="@color/purple_fondo"
                 android:textSize="18sp"
@@ -107,7 +107,6 @@
                 android:backgroundTint="@color/marino"
                 android:backgroundTintMode="screen"
                 android:ems="10"
-                android:inputType="number"
                 android:textColor="@color/purple_fondo"
                 android:textColorHint="@color/purple_fondo"
                 android:textSize="18sp"
@@ -124,7 +123,8 @@
                     android:id="@+id/cantidad_articulos"
                     android:layout_width="190dp"
                     android:layout_height="70dp"
-                    android:hint="Canttidad"
+                    android:hint="Cantidad"
+                    android:inputType="number"
                     android:textColor="@color/purple_fondo"
                     android:textColorHint="@color/purple_fondo"
                     android:textSize="18sp"

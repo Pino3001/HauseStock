@@ -1,6 +1,5 @@
 package com.app_control_stock.hausestock;
 
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,9 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.app_control_stock.hausestock.AgregarStock.Agregar;
-import com.app_control_stock.hausestock.BaseDatos.Estructura_BD;
 import com.app_control_stock.hausestock.Lista.Lista;
-import com.app_control_stock.hausestock.VerStocks.Ver_Stock;
+import com.app_control_stock.hausestock.Vencimientos.VerVencimientos;
+import com.app_control_stock.hausestock.VerStocks.VerStock;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,7 +31,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ejec_VerStock(View view){
-        Intent intencion = new Intent(this, Ver_Stock.class);
+        Intent intencion = new Intent(this, VerStock.class);
+        startActivities(new Intent[]{intencion});
+    }
+
+    public void ejec_VerVencimientos(View view){
+        Intent intencion = new Intent(this, VerVencimientos.class);
         startActivities(new Intent[]{intencion});
     }
 

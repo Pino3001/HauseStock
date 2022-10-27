@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.app_control_stock.hausestock.Vencimientos.AdaptadorVencimientos;
 import com.app_control_stock.hausestock.VerStocks.AdaptadorStock;
 
 import java.util.ArrayList;
@@ -46,8 +47,8 @@ public class Estructura_BD extends Helper_BD{
     }
 
     @NonNull
-    public static ArrayList<AdaptadorStock> mostrarContactos() {
-        ArrayList<AdaptadorStock> listaContactos = new ArrayList<>();
+    public static ArrayList<AdaptadorStock> mostrarStock() {
+        ArrayList<AdaptadorStock> listaStock = new ArrayList<>();
     try {
         Helper_BD dbHelper = new Helper_BD(context);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -64,7 +65,7 @@ public class Estructura_BD extends Helper_BD{
                 stock.setCantidad(cursorStock.getInt(2));
                 stock.setUnidadMedida(cursorStock.getString(3));
                 stock.setUbicacion(cursorStock.getString(5));
-                listaContactos.add(stock);
+                listaStock.add(stock);
             } while (cursorStock.moveToNext());
         }
 
@@ -72,7 +73,34 @@ public class Estructura_BD extends Helper_BD{
     }catch (Exception e){
         System.out.println(e.getMessage());
     }
-        return listaContactos;
+        return listaStock;
+    }
+
+    @NonNull
+    public static ArrayList<AdaptadorVencimientos> mostrarVencimientos() {
+        ArrayList<AdaptadorVencimientos> listaVencimientos = new ArrayList<>();
+        try {
+            Helper_BD dbHelper = new Helper_BD(context);
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+            AdaptadorVencimientos vencimientos;
+            Cursor cursorStock;
+
+            cursorStock = db.rawQuery("SELECT * FROM " + TABLE_STOCK + " ORDER BY Articulo ASC", null);
+
+            if (cursorStock.moveToFirst()) {
+                do {
+                    vencimientos = new AdaptadorVencimientos();
+                    vencimientos.setArticulo(cursorStock.getString(1));
+                    vencimientos.setVencimiento(cursorStock.getString(4));
+                    listaVencimientos.add(vencimientos);
+                } while (cursorStock.moveToNext());
+            }
+            cursorStock.close();
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        return listaVencimientos;
     }
 
     public AdaptadorStock verContacto(int id) {

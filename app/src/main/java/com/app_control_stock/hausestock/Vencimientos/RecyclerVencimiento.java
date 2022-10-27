@@ -1,4 +1,4 @@
-package com.app_control_stock.hausestock.VerStocks;
+package com.app_control_stock.hausestock.Vencimientos;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,30 +9,29 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app_control_stock.hausestock.R;
+import com.app_control_stock.hausestock.VerStocks.AdaptadorStock;
 
 import java.util.ArrayList;
 
-public class RecyclerAdapterStock extends RecyclerView.Adapter<RecyclerAdapterStock.StockViewHolder> {
+public class RecyclerVencimiento extends RecyclerView.Adapter<RecyclerVencimiento.VencimientoViewHolder> {
 
-    ArrayList<AdaptadorStock> listaArticulos;
+    ArrayList<AdaptadorVencimientos> listaVencimiento;
 
-    public RecyclerAdapterStock(ArrayList<AdaptadorStock> listaArticulos) {
-        this.listaArticulos = listaArticulos;
+    public RecyclerVencimiento(ArrayList<AdaptadorVencimientos> listaVencimiento) {
+        this.listaVencimiento = listaVencimiento;
     }
 
     @NonNull
     @Override
-    public StockViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.text_view, null, false);
-        return new StockViewHolder(view);
+    public VencimientoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.text_view_vencimientos, null, false);
+        return new VencimientoViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerAdapterStock.StockViewHolder holder, int position) {
-        holder.viewArticulo.setText(listaArticulos.get(position).getArticulo());
-        holder.viewCantidad.setText(String.valueOf(listaArticulos.get(position).getCantidad()));
-        holder.viewUnidad.setText(listaArticulos.get(position).getUnidadMedida());
-        holder.viewUbicacion.setText(listaArticulos.get(position).getUbicacion());
+    public void onBindViewHolder(@NonNull RecyclerVencimiento.VencimientoViewHolder holder, int position) {
+        holder.viewArticulo.setText(listaVencimiento.get(position).getArticulo());
+        holder.viewVencimiento.setText(listaVencimiento.get(position).getVencimiento());
     }
 
   /*  public void filtrado(final String txtBuscar) {
@@ -60,20 +59,18 @@ public class RecyclerAdapterStock extends RecyclerView.Adapter<RecyclerAdapterSt
 
     @Override
     public int getItemCount() {
-        return listaArticulos.size();
+        return listaVencimiento.size();
     }
 
-    public class StockViewHolder extends RecyclerView.ViewHolder {
+    public class VencimientoViewHolder extends RecyclerView.ViewHolder {
 
-        TextView viewArticulo, viewCantidad, viewUnidad, viewUbicacion;
+        TextView viewArticulo, viewVencimiento;
 
-        public StockViewHolder(@NonNull View itemView) {
+        public VencimientoViewHolder(@NonNull View itemView) {
             super(itemView);
 
             viewArticulo = itemView.findViewById(R.id.vencimiento_articulo);
-            viewCantidad = itemView.findViewById(R.id.viewCantidad);
-            viewUnidad = itemView.findViewById(R.id.viewUnidad);
-            viewUbicacion = itemView.findViewById(R.id.view_ubicacion);
+            viewVencimiento= itemView.findViewById(R.id.view_vencimiento);
         }
     }
 }

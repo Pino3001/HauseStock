@@ -1,7 +1,5 @@
 package com.app_control_stock.hausestock.VerStocks;
 
-import java.io.Serializable;
-
 public class AdaptadorStock {
 
     String articulo;
@@ -16,10 +14,7 @@ public class AdaptadorStock {
         this.ubicacion = ubicacion;
     }
 
-    public String getArticulo() {
-
-        return articulo;
-    }
+    public String getArticulo(){ return articulo; }
 
     public void setArticulo(String articulo) {
         this.articulo = articulo;

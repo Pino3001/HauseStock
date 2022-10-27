@@ -4,7 +4,7 @@
     style="@style/Theme.HauseStock"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgraund"
+    android:background="@drawable/fondo_app"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
@@ -46,6 +46,7 @@
             android:textColorHint="@color/purple_fondo"
             app:boxBackgroundMode="filled"
             app:boxStrokeColor="@color/marino"
+            app:boxStrokeWidth="3dp"
             app:boxBackgroundColor="@color/marino"
             app:counterTextColor="@color/purple_fondo"
             app:hintTextColor="@color/purple_fondo"
