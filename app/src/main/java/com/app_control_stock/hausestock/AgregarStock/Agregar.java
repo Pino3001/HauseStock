@@ -31,29 +31,36 @@ public class Agregar extends Activity {
         unidadMedida = (EditText) findViewById(R.id.unidad_medida);
         ubicacion = (EditText) findViewById(R.id.ubicacion_articulos);
 
-        Helper_BD helper = new Helper_BD(this);
-
         botonAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Gets the data repository in write mode
-                SQLiteDatabase db = helper.getWritableDatabase();
 
-                ContentValues values = new ContentValues();
-                values.put(Estructura_BD.TABLE_ID, (Integer) null);
-                values.put(Estructura_BD.COLUMNA_ARTICULOS, articulo.getText().toString());
-                values.put(Estructura_BD.COLUMNA_VENCIMIENTO, fechaVencimiento.getText().toString());
-                values.put(Estructura_BD.COLUMNA_CANTIDAD, cantidad.getText().toString());
-                values.put(Estructura_BD.COLUMNA_UNIDAD, unidadMedida.getText().toString());
-                values.put(Estructura_BD.COLUMNA_UBICACION, ubicacion.getText().toString());
+                if(!articulo.getText().toString().equals("")  && !unidadMedida.getText().toString().equals("") && !ubicacion.getText().toString().equals("")) {
 
+                    Estructura_BD db = new Estructura_BD(Agregar.this);
+                    int i = Integer.parseInt(cantidad.getText().toString());
+                    long id = db.insertarStock(articulo.getText().toString(), i, unidadMedida.getText().toString(), fechaVencimiento.getText().toString(), ubicacion.getText().toString());
 
-
-                long newRowId = db.insert(Estructura_BD.TABLE_NAME, null, values);
-                Toast.makeText(Agregar.this, "Se agrego el articulo:" + Estructura_BD.TABLE_ID, Toast.LENGTH_SHORT).show();
+                    if (id > 0) {
+                        Toast.makeText(Agregar.this, "REGISTRO GUARDADO", Toast.LENGTH_LONG).show();
+                        limpiar();
+                    } else {
+                        Toast.makeText(Agregar.this, "ERROR AL GUARDAR REGISTRO", Toast.LENGTH_LONG).show();
+                    }
+                } else {
+                    Toast.makeText(Agregar.this, "DEBE LLENAR LOS CAMPOS OBLIGATORIOS", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
 
+    private void limpiar() {
+        articulo.setText("");
+        cantidad.setText("");
+        unidadMedida.setText("");
+        fechaVencimiento.setText("");
+        ubicacion.setText("");
 
+    }
 }
+
