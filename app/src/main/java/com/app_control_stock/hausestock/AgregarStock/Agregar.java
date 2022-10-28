@@ -5,8 +5,11 @@ import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.app_control_stock.hausestock.BaseDatos.Estructura_BD;
@@ -17,6 +20,7 @@ public class Agregar extends Activity {
 
     Button botonAgregar;
     EditText articulo, fechaVencimiento, cantidad, unidadMedida, ubicacion;
+    Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,24 @@ public class Agregar extends Activity {
         cantidad = (EditText) findViewById(R.id.cantidad_articulos);
         unidadMedida = (EditText) findViewById(R.id.unidad_medida);
         ubicacion = (EditText) findViewById(R.id.ubicacion_articulos);
+        spinner = (Spinner) findViewById(R.id.unidad_medida_spiner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.unidad_medida, android.R.layout.simple_spinner_item);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id)
+            {
+                Toast.makeText(adapterView.getContext(), (String) adapterView.getItemAtPosition(position), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent)
+            {
+                // vacio
+
+            }
+        });
+        spinner.setAdapter(adapter);
 
         botonAgregar.setOnClickListener(new View.OnClickListener() {
             @Override

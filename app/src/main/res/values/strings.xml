@@ -3,4 +3,11 @@
     <string name="Home_name">Home</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="unidad_medida">
+        <item>ud</item>
+        <item>Kg</item>
+        <item>gr</item>
+        <item>L</item>
+        <item>ml</item>
+    </string-array>
 </resources>

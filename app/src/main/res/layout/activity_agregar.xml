@@ -156,6 +156,7 @@
                     android:textColorHint="@color/purple_fondo"
                     android:textSize="18sp"
                     android:textStyle="bold" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
@@ -205,5 +206,12 @@
             android:textSize="18dp"
             android:textStyle="bold"
             app:iconTint="@color/marino" />
+
+        <Spinner
+            android:id="@+id/unidad_medida_spiner"
+            style="@style/spinner_style"
+            android:layout_width="90dp"
+            android:layout_height="70dp" />
+
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

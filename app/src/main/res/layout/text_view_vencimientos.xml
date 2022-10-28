@@ -21,7 +21,7 @@
             android:layout_weight="1"
             android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center"
-            android:textColor="@color/purple_fondo"
+            android:textColor="@color/white"
             android:textSize="22sp"
             android:textStyle="bold" />
 

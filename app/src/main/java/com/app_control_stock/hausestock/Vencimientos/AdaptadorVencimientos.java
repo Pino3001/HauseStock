@@ -15,7 +15,7 @@ public class AdaptadorVencimientos {
     }
 
     public void setArticulo(String articulo) {
-        articulo = articulo;
+        this.articulo = articulo;
     }
 
     public String getVencimiento() {
@@ -23,6 +23,6 @@ public class AdaptadorVencimientos {
     }
 
     public void setVencimiento(String vencimiento) {
-        vencimiento = vencimiento;
+        this.vencimiento = vencimiento;
     }
 }

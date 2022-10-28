@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/accion_articulo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fondo_app"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="262dp"
+            android:layout_height="71dp"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="¿ QUE DESEA REALIZAR CON ESTE ARTICULO ?"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/articulo_alert"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="372dp"
+        android:layout_height="71dp"
+        android:layout_gravity="center"
+        android:gravity="center|top"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/agregar_alert"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/marino"
+            android:fontFamily="sans-serif-black"
+            android:shadowRadius="5"
+            android:text="Agregar"
+            android:textColor="@color/purple_fondo"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:cornerRadius="30dp" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/salir_alert"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/marino"
+            android:fontFamily="sans-serif-black"
+            android:shadowRadius="5"
+            android:text="NADA"
+            android:textColor="@color/purple_fondo"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:cornerRadius="30dp" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/eliminar_alert"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/marino"
+            android:fontFamily="sans-serif-black"
+            android:shadowRadius="5"
+            android:text="Eliminar"
+            android:textColor="@color/purple_fondo"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:cornerRadius="30dp" />
+    </LinearLayout>
+
+</LinearLayout>

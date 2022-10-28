@@ -84,19 +84,19 @@ public class Estructura_BD extends Helper_BD{
             SQLiteDatabase db = dbHelper.getWritableDatabase();
 
             AdaptadorVencimientos vencimientos;
-            Cursor cursorStock;
+            Cursor cursorVencimiento;
 
-            cursorStock = db.rawQuery("SELECT * FROM " + TABLE_STOCK + " ORDER BY Articulo ASC", null);
+            cursorVencimiento = db.rawQuery("SELECT * FROM " + TABLE_STOCK + " ORDER BY Articulo ASC", null);
 
-            if (cursorStock.moveToFirst()) {
+            if (cursorVencimiento.moveToFirst()) {
                 do {
                     vencimientos = new AdaptadorVencimientos();
-                    vencimientos.setArticulo(cursorStock.getString(1));
-                    vencimientos.setVencimiento(cursorStock.getString(4));
+                    vencimientos.setArticulo(cursorVencimiento.getString(1));
+                    vencimientos.setVencimiento(cursorVencimiento.getString(4));
                     listaVencimientos.add(vencimientos);
-                } while (cursorStock.moveToNext());
+                } while (cursorVencimiento.moveToNext());
             }
-            cursorStock.close();
+            cursorVencimiento.close();
         }catch (Exception e){
             System.out.println(e.getMessage());
         }

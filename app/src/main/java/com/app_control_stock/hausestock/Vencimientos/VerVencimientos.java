@@ -19,6 +19,7 @@ public class VerVencimientos extends AppCompatActivity {
 
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_vencimientos);
         listaVencimientos = findViewById(R.id.recycler_vencimientos);
         listaVencimientos.setLayoutManager(new LinearLayoutManager(this));

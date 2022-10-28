@@ -7,11 +7,14 @@ import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.ContextThemeWrapper;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -47,7 +50,8 @@ public class Lista extends Activity {
 
         compras = new ArrayList<>();
 
-        adaptador1 = new ArrayAdapter<ListaAdapter>(this, android.R.layout.simple_list_item_checked, compras) {
+        ContextThemeWrapper themedContext = new ContextThemeWrapper(this, R.style.Theme_lista);
+        adaptador1 = new ArrayAdapter<ListaAdapter>(themedContext, android.R.layout.simple_list_item_multiple_choice, compras) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
                 View view = super.getView(position, convertView, parent);
@@ -55,7 +59,7 @@ public class Lista extends Activity {
                 textView.setText(compras.get(position).getItem());
                 textView.setBackgroundColor(getColor(R.color.marino));
                 textView.setTextColor(getColor(R.color.purple_fondo));
-                textView.setTextSize(22);
+                textView.setTextSize(18);
                 textView.setTypeface(Typeface.SERIF,Typeface.BOLD);
                 return view;
             }
@@ -79,25 +83,7 @@ public class Lista extends Activity {
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                final int posicion=i;
-
-                AlertDialog.Builder dialogo1 = new AlertDialog.Builder(Lista.this);
-                dialogo1.setTitle("Atencion");
-                dialogo1.setMessage("¿ Desea eliminar: " +listaCompras.get(i)+ "?");
-                dialogo1.setCancelable(false);
-
-                dialogo1.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialogo1, int id) {
-                        compras.remove(i);
-                        listaCompras.remove(i);
-                        adaptador1.notifyDataSetChanged();
-                    }
-                });
-                dialogo1.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialogo1, int id) {
-                    }
-                });
-                dialogo1.show();
+                createCustomDialog(i).show();
                 return false;
             }
         });
@@ -127,25 +113,52 @@ public class Lista extends Activity {
         adaptador1.notifyDataSetChanged();
     }
 
-  /* public void imprimoLista(View view){
-        for (int i = 0; i < paraComprar.size(); i++) {
-            listView = findViewById(R.id.list1);
-            listView.setAdapter(adaptador1);
-            editorTexto = findViewById(R.id.text_imput_lista);
-            adaptador1.add(paraComprar.get(i));
-            adaptador1.notifyDataSetChanged();
+    public AlertDialog createCustomDialog(int i) {
+        final AlertDialog alertDialog;
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        TextView tv;
 
-        }
-   }*/
-}
+        LayoutInflater inflater = getLayoutInflater();
+        View v = inflater.inflate(R.layout.alert_dialog_lista, null);
 
-   /* public void onSaveInstanceState(Bundle bundle){
-        bundle.putStringArrayList("compras", (ArrayList<String>) paraComprar);
-        super.onSaveInstanceState(bundle);
+        tv = (TextView) v.findViewById(R.id.articulo_alert);
+        tv.setText(listaCompras.get(i));
+        builder.setView(inflater.inflate(R.layout.alert_dialog_lista, null));
+
+        Button agregar = (Button) v.findViewById(R.id.agregar_alert);
+        Button eliminar = (Button) v.findViewById(R.id.eliminar_alert);
+        Button salir = (Button) v.findViewById(R.id.salir_alert);
+
+        builder.setView(v);
+        alertDialog = builder.create();
+        agregar.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // Aceptar
+                        alertDialog.dismiss();
+                    }
+                }
+        );
+        eliminar.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        alertDialog.dismiss();
+                        compras.remove(i);
+                        listaCompras.remove(i);
+                        adaptador1.notifyDataSetChanged();
+                    }
+                }
+        );
+        salir.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        alertDialog.dismiss();
+                    }
+                }
+        );
+        return alertDialog;
     }
-
-    public void onRestoreInstanceState(Bundle bundle){
-        super.onRestoreInstanceState(bundle);
-        paraComprar = bundle.getStringArrayList("compras");
-        imprimoLista(null);
-    }*/
+}

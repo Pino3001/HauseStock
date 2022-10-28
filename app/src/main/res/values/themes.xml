@@ -27,6 +27,27 @@
     <style name="Theme.HauseStock.Texto">
         <item name="fontFamily">casual</item>
     </style>
+    <style name="Theme.AlertDialog" parent="Theme.Design.BottomSheetDialog">
+        <item name="background">@drawable/fondo_app</item>
+        <item name="alertDialogTheme">@drawable/fondo_app</item>
+        <item name="alertDialogButtonGroupStyle">@id/horizontal_only</item>
+        <item name="android:windowBackground">@drawable/fondo_app</item>
+    </style>
+    <style name="Theme.lista" parent="Theme.HauseStock">
+        <item name="android:checkMarkTint">@color/purple_fondo</item>
+    </style>
+    <style name="spinner_style">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/spiner_selector</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:popupBackground">@color/purple_fondo</item>
+    </style>
 
 </resources>
 

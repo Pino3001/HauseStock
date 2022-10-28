@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app_control_stock.hausestock.R;
-import com.app_control_stock.hausestock.VerStocks.AdaptadorStock;
 
 import java.util.ArrayList;
 
@@ -30,7 +29,6 @@ public class RecyclerVencimiento extends RecyclerView.Adapter<RecyclerVencimient
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerVencimiento.VencimientoViewHolder holder, int position) {
-        holder.viewArticulo.setText(listaVencimiento.get(position).getArticulo());
         holder.viewVencimiento.setText(listaVencimiento.get(position).getVencimiento());
     }
 

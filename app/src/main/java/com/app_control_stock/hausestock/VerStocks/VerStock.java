@@ -19,6 +19,7 @@ public class VerStock extends AppCompatActivity {
 
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_verstock);
         listaArticulos = findViewById(R.id.recycler_view);
         listaArticulos.setLayoutManager(new LinearLayoutManager(this));

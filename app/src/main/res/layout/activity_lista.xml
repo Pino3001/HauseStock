@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     style="@style/Theme.HauseStock"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_app"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    app:circularflow_radiusInDP="5"
+    tools:context=".Lista.Lista">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -44,10 +47,10 @@
             android:hint="Articulos"
             android:textColor="@color/purple_fondo"
             android:textColorHint="@color/purple_fondo"
+            app:boxBackgroundColor="@color/marino"
             app:boxBackgroundMode="filled"
             app:boxStrokeColor="@color/marino"
             app:boxStrokeWidth="3dp"
-            app:boxBackgroundColor="@color/marino"
             app:counterTextColor="@color/purple_fondo"
             app:hintTextColor="@color/purple_fondo"
             app:suffixTextColor="@color/purple_fondo">
@@ -81,11 +84,14 @@
         <ListView
             android:id="@+id/list1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
             android:choiceMode="multipleChoice"
             android:divider="@color/backgraund"
             android:dividerHeight="4dp"
-            android:paddingLeft="10dp"
+            android:paddingLeft="15dp"
             android:paddingRight="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

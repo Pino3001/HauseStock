@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.ObjectStreamException;
 import java.io.Serializable;
 
-public class ListaAdapter implements Serializable {
+public class ListaAdapter {
 
     int id;
     String item;
