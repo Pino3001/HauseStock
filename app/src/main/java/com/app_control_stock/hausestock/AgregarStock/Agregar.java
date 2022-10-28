@@ -34,7 +34,7 @@ public class Agregar extends Activity {
         cantidad = (EditText) findViewById(R.id.cantidad_articulos);
         unidadMedida = (EditText) findViewById(R.id.unidad_medida);
         ubicacion = (EditText) findViewById(R.id.ubicacion_articulos);
-        spinner = (Spinner) findViewById(R.id.unidad_medida_spiner);
+        /*spinner = (Spinner) findViewById(R.id.unidad_medida_spiner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.unidad_medida, android.R.layout.simple_spinner_item);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
@@ -51,7 +51,7 @@ public class Agregar extends Activity {
 
             }
         });
-        spinner.setAdapter(adapter);
+        spinner.setAdapter(adapter);*/
 
         botonAgregar.setOnClickListener(new View.OnClickListener() {
             @Override

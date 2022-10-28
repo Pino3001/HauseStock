@@ -38,7 +38,6 @@
             android:layout_width="320dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
-            android:backgroundTint="@color/marino"
             android:backgroundTintMode="screen"
             android:textColorHint="@color/purple_fondo"
             app:boxBackgroundMode="filled"
@@ -206,12 +205,6 @@
             android:textSize="18dp"
             android:textStyle="bold"
             app:iconTint="@color/marino" />
-
-        <Spinner
-            android:id="@+id/unidad_medida_spiner"
-            style="@style/spinner_style"
-            android:layout_width="90dp"
-            android:layout_height="70dp" />
 
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
