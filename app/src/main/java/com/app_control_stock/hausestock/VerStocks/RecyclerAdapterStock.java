@@ -15,16 +15,19 @@ import java.util.ArrayList;
 public class RecyclerAdapterStock extends RecyclerView.Adapter<RecyclerAdapterStock.StockViewHolder> {
 
     ArrayList<AdaptadorStock> listaArticulos;
+    private OnNoteListener onNoteListener;;
 
-    public RecyclerAdapterStock(ArrayList<AdaptadorStock> listaArticulos) {
+    public RecyclerAdapterStock(ArrayList<AdaptadorStock> listaArticulos, OnNoteListener onNoteListener) {
         this.listaArticulos = listaArticulos;
+        this.onNoteListener = onNoteListener;
     }
 
     @NonNull
     @Override
     public StockViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.text_view, null, false);
-        return new StockViewHolder(view);
+        return new StockViewHolder(view, onNoteListener);
+
     }
 
     @Override
@@ -63,17 +66,32 @@ public class RecyclerAdapterStock extends RecyclerView.Adapter<RecyclerAdapterSt
         return listaArticulos.size();
     }
 
-    public class StockViewHolder extends RecyclerView.ViewHolder {
+    public interface OnNoteListener{
+        void onNoteClick(int position);
+    }
+
+    public class StockViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         TextView viewArticulo, viewCantidad, viewUnidad, viewUbicacion;
+        OnNoteListener onNoteListener;
 
-        public StockViewHolder(@NonNull View itemView) {
+        public StockViewHolder(@NonNull View itemView, OnNoteListener onNoteListener) {
             super(itemView);
 
             viewArticulo = itemView.findViewById(R.id.vencimiento_articulo);
             viewCantidad = itemView.findViewById(R.id.viewCantidad);
             viewUnidad = itemView.findViewById(R.id.viewUnidad);
             viewUbicacion = itemView.findViewById(R.id.view_ubicacion);
+
+            itemView.setOnClickListener(this);
+            this.onNoteListener = onNoteListener;
+
+        }
+
+        @Override
+        public void onClick(View v) {
+            this.onNoteListener.onNoteClick(getAdapterPosition());
+            this.viewArticulo.getText();
         }
     }
 }

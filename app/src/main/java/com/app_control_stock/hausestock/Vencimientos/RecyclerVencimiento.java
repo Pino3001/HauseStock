@@ -29,6 +29,7 @@ public class RecyclerVencimiento extends RecyclerView.Adapter<RecyclerVencimient
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerVencimiento.VencimientoViewHolder holder, int position) {
+        holder.viewArticulo.setText(listaVencimiento.get(position).getArticulo());
         holder.viewVencimiento.setText(listaVencimiento.get(position).getVencimiento());
     }
 

@@ -27,7 +27,8 @@ public class VerVencimientos extends AppCompatActivity {
         listaArrayVencimientos = new ArrayList<>();
 
         Estructura_BD bd = new Estructura_BD(VerVencimientos.this);
-        adapter = new RecyclerVencimiento(bd.mostrarVencimientos());
+        listaArrayVencimientos = bd.mostrarVencimientos();
+        adapter = new RecyclerVencimiento(listaArrayVencimientos);
         listaVencimientos.setAdapter(adapter);
 
     }

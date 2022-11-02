@@ -61,6 +61,7 @@ public class Estructura_BD extends Helper_BD{
         if (cursorStock.moveToFirst()) {
             do {
                 stock = new AdaptadorStock();
+                stock.setId(cursorStock.getInt(0));
                 stock.setArticulo(cursorStock.getString(1));
                 stock.setCantidad(cursorStock.getInt(2));
                 stock.setUnidadMedida(cursorStock.getString(3));
@@ -146,7 +147,7 @@ public class Estructura_BD extends Helper_BD{
         return correcto;
     }
 
-    public boolean eliminarContacto(int id) {
+    public boolean eliminarArticulo(int id) {
 
         boolean correcto = false;
 
