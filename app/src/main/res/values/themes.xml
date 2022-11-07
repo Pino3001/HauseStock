@@ -36,17 +36,11 @@
     <style name="Theme.lista" parent="Theme.HauseStock">
         <item name="android:checkMarkTint">@color/purple_fondo</item>
     </style>
-    <style name="spinner_style">
-        <item name="android:layout_width">90dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@drawable/spiner_selector</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:layout_margin">10dp</item>
-        <item name="android:paddingLeft">8dp</item>
-        <item name="android:paddingRight">20dp</item>
-        <item name="android:paddingTop">5dp</item>
-        <item name="android:paddingBottom">5dp</item>
-        <item name="android:popupBackground">@color/purple_fondo</item>
+    <style name="spinner_style" parent="@android:style/Widget.Holo.Light.Spinner">
+        <item name="boxBackgroundColor">@color/marino</item>
+        <item name="colorContainer">@color/marino</item>
+        <item name="boxStrokeColor">@color/marino</item>
+        <item name="colorOnPrimary">@color/marino</item>
     </style>
 
 </resources>

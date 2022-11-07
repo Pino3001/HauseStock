@@ -16,7 +16,167 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"/>
+            android:orientation="horizontal" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/transparente"
+            android:backgroundTint="@color/transparente"
+            android:hint="Articulo"
+            android:textColorHint="@color/marino"
+            app:boxBackgroundColor="@color/marino"
+            app:boxBackgroundMode="none"
+            app:boxStrokeColor="@color/marino"
+            app:boxStrokeErrorColor="@color/marino"
+            app:boxStrokeWidth="2dp"
+            app:counterTextColor="@color/marino">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparente"
+                android:backgroundTint="@color/transparente"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:background="@color/marino"
+                android:backgroundTint="@color/marino" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/transparente"
+            android:backgroundTint="@color/transparente"
+            android:hint="Fecha de Vencimiento"
+            android:inputType="date"
+            android:textColorHint="@color/marino"
+            app:boxBackgroundColor="@color/marino"
+            app:boxBackgroundMode="none"
+            app:boxStrokeColor="@color/marino"
+            app:boxStrokeErrorColor="@color/marino"
+            app:boxStrokeWidth="2dp"
+            app:counterTextColor="@color/marino">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparente"
+                android:backgroundTint="@color/transparente"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:background="@color/marino"
+                android:backgroundTint="@color/marino" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/transparente"
+                android:backgroundTint="@color/transparente"
+                android:hint="Cantidad"
+                android:inputType="number"
+                android:textColorHint="@color/marino"
+                app:boxBackgroundColor="@color/marino"
+                app:boxBackgroundMode="none"
+                app:boxStrokeColor="@color/marino"
+                app:boxStrokeErrorColor="@color/marino"
+                app:boxStrokeWidth="2dp"
+                app:counterTextColor="@color/marino">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparente"
+                    android:backgroundTint="@color/transparente"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/marino"
+                    android:backgroundTint="@color/marino" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/unidad_medida_spiner"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/marino"
+                android:backgroundTintMode="src_in"
+                android:dropDownSelector="@color/marino"
+                android:foregroundTintMode="multiply"
+                android:popupBackground="@color/marino"
+                android:scrollbarThumbHorizontal="@color/marino"
+                android:scrollbarThumbVertical="@color/marino"
+                android:scrollbarTrackHorizontal="@color/marino"
+                android:scrollbarTrackVertical="@color/marino"
+                android:spinnerMode="dialog" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/transparente"
+            android:backgroundTint="@color/transparente"
+            android:hint="Ubicacion"
+            android:textColorHint="@color/marino"
+            app:boxBackgroundColor="@color/marino"
+            app:boxBackgroundMode="none"
+            app:boxStrokeColor="@color/marino"
+            app:boxStrokeErrorColor="@color/marino"
+            app:boxStrokeWidth="2dp"
+            app:counterTextColor="@color/marino">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparente"
+                android:backgroundTint="@color/transparente"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:background="@color/marino"
+                android:backgroundTint="@color/marino" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button_agregar"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/marino"
+            android:fontFamily="serif"
+            android:text="ADD"
+            android:textColor="@color/purple_fondo"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:iconTint="@color/marino" />
 
     </LinearLayout>
 

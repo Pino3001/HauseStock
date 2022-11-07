@@ -16,34 +16,34 @@
         android:foregroundGravity="center_vertical">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginTop="-60dp"
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="377dp"
-                android:layout_height="496dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="top"
                 android:gravity="top"
                 android:orientation="vertical">
 
                 <Space
                     android:layout_width="wrap_content"
-                    android:layout_height="110dp" />
+                    android:layout_height="140dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="214dp"
+                    android:layout_height="249dp"
                     android:gravity="center">
 
                     <ImageButton
                         android:id="@+id/lista_compras"
-                        android:layout_width="170dp"
-                        android:layout_height="170dp"
+                        android:layout_width="174dp"
+                        android:layout_height="214dp"
                         android:onClick="ejec_lista"
-                        app:srcCompat="@drawable/notas" />
+                        app:srcCompat="@drawable/listas_notas" />
 
                     <Space
                         android:layout_width="15dp"
@@ -51,23 +51,27 @@
 
                     <ImageButton
                         android:id="@+id/button_agregar"
-                        android:layout_width="170dp"
-                        android:layout_height="170dp"
+                        android:layout_width="174dp"
+                        android:layout_height="214dp"
                         android:onClick="ejec_agregar"
                         app:srcCompat="@drawable/agregar_stock" />
                 </LinearLayout>
 
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="173dp"
+                    android:layout_height="214dp"
                     android:gravity="center">
 
                     <ImageButton
                         android:id="@+id/imageButton3"
-                        android:layout_width="170dp"
-                        android:layout_height="170dp"
+                        android:layout_width="174dp"
+                        android:layout_height="215dp"
                         android:onClick="ejec_VerStock"
-                        app:srcCompat="@drawable/heladera" />
+                        app:srcCompat="@drawable/ver_stocks" />
 
                     <Space
                         android:layout_width="15dp"
@@ -75,8 +79,8 @@
 
                     <ImageButton
                         android:id="@+id/imageButton5"
-                        android:layout_width="170dp"
-                        android:layout_height="170dp"
+                        android:layout_width="174dp"
+                        android:layout_height="214dp"
                         android:onClick="ejec_VerVencimientos"
                         app:srcCompat="@drawable/vencimientos" />
                 </LinearLayout>
@@ -102,5 +106,13 @@
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:text="Pino_3001"
+        android:textColor="@color/white" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -30,72 +30,46 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
+    <MultiAutoCompleteTextView
+        android:id="@+id/text_imput_lista"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top|end"
+        android:focusable="auto"
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-black"
+        android:hint="Articulo"
+        android:imeOptions="actionGo"
+        android:singleLine="true"
+        android:textColorHint="@color/marino"
+        android:textSize="22sp"
+        android:visibility="gone" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:src="@android:drawable/ic_input_add"
+        android:tint="@color/marino"
+        app:backgroundTint="@color/purple_fondo"
+        app:rippleColor="@color/marino" />
+
     <LinearLayout
-        android:id="@+id/linear_lista_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="70dp"
-        android:orientation="vertical"
-        android:paddingTop="15dp">
+        android:orientation="vertical">
 
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/lista_deArticulos"
-            android:layout_width="320dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center"
-            android:hint="Articulos"
-            android:textColor="@color/purple_fondo"
-            android:textColorHint="@color/purple_fondo"
-            app:boxBackgroundColor="@color/marino"
-            app:boxBackgroundMode="filled"
-            app:boxStrokeColor="@color/marino"
-            app:boxStrokeWidth="3dp"
-            app:counterTextColor="@color/purple_fondo"
-            app:hintTextColor="@color/purple_fondo"
-            app:suffixTextColor="@color/purple_fondo">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/text_imput_lista"
-                android:layout_width="300dp"
-                android:layout_height="70dp"
-                android:drawableTint="@color/purple_fondo"
-                android:shadowColor="@color/purple_fondo"
-                android:textColor="@color/purple_fondo"
-                android:textColorHint="@color/purple_fondo"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="80dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:backgroundTint="@color/marino"
-            android:fontFamily="serif"
-            android:onClick="agregar"
-            android:text="ADD"
-            android:textColor="@color/purple_fondo"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-
-        <ListView
-            android:id="@+id/list1"
-            android:layout_width="match_parent"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lista_recycler"
+            android:layout_width="340dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="5dp"
-            android:choiceMode="multipleChoice"
-            android:divider="@color/backgraund"
-            android:dividerHeight="4dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            android:layout_gravity="center" />
     </LinearLayout>
 
 

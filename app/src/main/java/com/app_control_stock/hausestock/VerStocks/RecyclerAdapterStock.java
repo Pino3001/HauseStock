@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class RecyclerAdapterStock extends RecyclerView.Adapter<RecyclerAdapterStock.StockViewHolder> {
 
     ArrayList<AdaptadorStock> listaArticulos;
-    private OnNoteListener onNoteListener;;
+    private OnNoteListener onNoteListener;
 
     public RecyclerAdapterStock(ArrayList<AdaptadorStock> listaArticulos, OnNoteListener onNoteListener) {
         this.listaArticulos = listaArticulos;
@@ -25,7 +25,7 @@ public class RecyclerAdapterStock extends RecyclerView.Adapter<RecyclerAdapterSt
     @NonNull
     @Override
     public StockViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.text_view, null, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.text_view_stock, null, false);
         return new StockViewHolder(view, onNoteListener);
 
     }
@@ -78,7 +78,7 @@ public class RecyclerAdapterStock extends RecyclerView.Adapter<RecyclerAdapterSt
         public StockViewHolder(@NonNull View itemView, OnNoteListener onNoteListener) {
             super(itemView);
 
-            viewArticulo = itemView.findViewById(R.id.vencimiento_articulo);
+            viewArticulo = itemView.findViewById(R.id.viewArticulo);
             viewCantidad = itemView.findViewById(R.id.viewCantidad);
             viewUnidad = itemView.findViewById(R.id.viewUnidad);
             viewUbicacion = itemView.findViewById(R.id.view_ubicacion);

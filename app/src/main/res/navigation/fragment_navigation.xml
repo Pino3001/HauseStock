@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_navigation"
+    app:startDestination="@id/lista2">
+
+    <fragment
+        android:id="@+id/fragment_agregar"
+        android:name="com.app_control_stock.hausestock.fragment_agregar"
+        android:label="fragment_agregar"
+        tools:layout="@layout/fragment_agregar" >
+        <action
+            android:id="@+id/action_fragment_agregar_to_lista2"
+            app:destination="@id/lista2" />
+    </fragment>
+    <activity
+        android:id="@+id/lista2"
+        android:name="com.app_control_stock.hausestock.Lista.Lista"
+        android:label="activity_lista"
+        tools:layout="@layout/activity_lista" />
+</navigation>

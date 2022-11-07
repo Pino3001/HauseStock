@@ -40,7 +40,7 @@
             android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center"
             android:text="Articulos"
-            android:textColor="@color/purple_fondo"
+            android:textColor="@color/marino"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -53,7 +53,7 @@
             android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center"
             android:text="Vencimientos"
-            android:textColor="@color/purple_fondo"
+            android:textColor="@color/marino"
             android:textSize="24sp"
             android:textStyle="bold" />
     </LinearLayout>

@@ -8,10 +8,20 @@ public class ListaAdapter {
 
     int id;
     String item;
+    boolean ckick;
 
-    public ListaAdapter(int id, String item) {
+    public ListaAdapter(int id, String  item, boolean ckick) {
         this.id = id;
         this.item = item;
+        this.ckick = ckick;
+    }
+
+    public boolean isCkick() {
+        return ckick;
+    }
+
+    public void setCkick(boolean ckick) {
+        this.ckick = ckick;
     }
 
     public void setId(int id) {
@@ -29,6 +39,5 @@ public class ListaAdapter {
     public String getItem() {
         return item;
     }
-
 
 }

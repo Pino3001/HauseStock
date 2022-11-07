@@ -15,16 +15,19 @@ import java.util.ArrayList;
 public class RecyclerVencimiento extends RecyclerView.Adapter<RecyclerVencimiento.VencimientoViewHolder> {
 
     ArrayList<AdaptadorVencimientos> listaVencimiento;
+    private OnNoteListener onNoteListener;
 
-    public RecyclerVencimiento(ArrayList<AdaptadorVencimientos> listaVencimiento) {
+    public RecyclerVencimiento(ArrayList<AdaptadorVencimientos> listaVencimiento, OnNoteListener onNoteListener) {
         this.listaVencimiento = listaVencimiento;
+        this.onNoteListener = onNoteListener;
+
     }
 
     @NonNull
     @Override
     public VencimientoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.text_view_vencimientos, null, false);
-        return new VencimientoViewHolder(view);
+        return new VencimientoViewHolder(view, onNoteListener);
     }
 
     @Override
@@ -61,15 +64,27 @@ public class RecyclerVencimiento extends RecyclerView.Adapter<RecyclerVencimient
         return listaVencimiento.size();
     }
 
-    public class VencimientoViewHolder extends RecyclerView.ViewHolder {
+    public interface OnNoteListener{
+        void onNoteClick(int position);
+    }
+
+    public class VencimientoViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         TextView viewArticulo, viewVencimiento;
+        private final OnNoteListener onNoteListener;
 
-        public VencimientoViewHolder(@NonNull View itemView) {
+        public VencimientoViewHolder(@NonNull View itemView, OnNoteListener onNoteListener) {
             super(itemView);
 
-            viewArticulo = itemView.findViewById(R.id.vencimiento_articulo);
+            viewArticulo = itemView.findViewById(R.id.viewArticulo);
             viewVencimiento= itemView.findViewById(R.id.view_vencimiento);
+
+            itemView.setOnClickListener(this);
+            this.onNoteListener = onNoteListener;
+        }
+        @Override
+        public void onClick(View v) {
+            this.onNoteListener.onNoteClick(getAdapterPosition());
         }
     }
 }

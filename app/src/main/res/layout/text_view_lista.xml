@@ -1,27 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center|top"
-    android:background="@color/marino"
-    android:foregroundGravity="center"
+    android:backgroundTint="@color/purple_fondo"
+    android:backgroundTintMode="multiply"
     android:gravity="center"
-    android:paddingLeft="15dp"
-    android:paddingRight="15dp">
+    android:orientation="vertical"
+    app:layout_anchorGravity="center">
 
-    <TextView
-        android:id="@+id/view_lista"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/purple_fondo" />
+    <View
+        android:id="@+id/divider9"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="@color/transparente" />
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:buttonTint="@color/purple_fondo"
-        android:checked="false"
-        android:linksClickable="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_gravity="center"
+        android:background="@drawable/style_lista"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkBox_list"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:buttonTint="@color/purple_fondo"
+            android:buttonTintMode="src_in"
+            android:onClick="check_lista" />
+
+        <TextView
+            android:id="@+id/text_lista"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:textColor="@color/purple_fondo"
+            android:textSize="23sp" />
+
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/delete_icon"
+            android:backgroundTint="@color/purple_fondo"
+            android:backgroundTintMode="src_atop"
+            android:foreground="@color/transparente"
+            android:foregroundTint="@color/white"
+            android:foregroundTintMode="multiply" />
+
+    </LinearLayout>
+
 </LinearLayout>

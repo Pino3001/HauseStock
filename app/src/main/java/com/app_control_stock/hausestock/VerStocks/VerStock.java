@@ -25,8 +25,8 @@ public class VerStock extends AppCompatActivity {
 
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_verstock);
+
         listaArticulos = findViewById(R.id.recycler_view);
         listaArticulos.setLayoutManager(new LinearLayoutManager(this));
 
@@ -36,7 +36,6 @@ public class VerStock extends AppCompatActivity {
         RecyclerAdapterStock.OnNoteListener OnNoteListener = new RecyclerAdapterStock.OnNoteListener() {
             @Override
             public void onNoteClick(int position) {
-                //Toast.makeText(VerStock.this, "Anda; ", Toast.LENGTH_SHORT).show();
                 createCustomDialog(position).show();
             }
         };
@@ -54,8 +53,8 @@ public class VerStock extends AppCompatActivity {
         LayoutInflater inflater = getLayoutInflater();
         View v = inflater.inflate(R.layout.alert_dialog_versctock, null);
 
-        /*tv = (TextView) v.findViewById(R.id.articulo_alert);
-        tv.setText(listaArrayArticulos.get(i).getArticulo());*/
+        tv = (TextView) v.findViewById(R.id.articulo_alert);
+        tv.setText(listaArrayArticulos.get(i).getArticulo());
         builder.setView(inflater.inflate(R.layout.alert_dialog_versctock, null));
 
         Button editar = (Button) v.findViewById(R.id.editar_alert_stock);
@@ -68,7 +67,6 @@ public class VerStock extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        // Aceptar
                         alertDialog.dismiss();
                     }
                 }
@@ -90,9 +88,6 @@ public class VerStock extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         alertDialog.dismiss();
-                        listaArrayArticulos.remove(i);
-                        adapter.notifyDataSetChanged();
-
                     }
                 }
         );
